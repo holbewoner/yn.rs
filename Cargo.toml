@@ -1,6 +1,15 @@
 [package]
 name = "yn"
+description = "Natural language processing library for yes or no values"
+documentation = "https://docs.rs/yn"
+homepage = "https://github.com/TheUnitedStatesOfAmerica/yn.rs"
+repository = "https://github.com/TheUnitedStatesOfAmerica/yn.rs.git"
+license = "MIT"
+readme = "README.md"
 version = "0.1.0"
-authors = [""]
+authors = ["TheUnitedStatesOfAmerica <me@luna.fyi>"]
+
+[badges.maintenance]
+status = "actively-developed"
 
 [dependencies]
