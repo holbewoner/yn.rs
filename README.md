@@ -1,3 +1,5 @@
+[![ci-badge][]][ci] [![docs-badge][]][docs]
+
 # yn
 
 Want to check if a value is yes, no, maybe both? Maybe you want to check if a value is somewhat yes? Somewhat no?
@@ -60,3 +62,8 @@ The options are endless. Your imagination is the limit.
 ## License
 
 Licensed under MIT
+
+[ci]: https://travis-ci.org/TheUnitedStatesOfAmerica/yn.rs
+[ci-badge]: https://travis-ci.org/TheUnitedStatesOfAmerica/yn.rs.svg?branch=master
+[docs]: https://docs.rs/yn
+[docs-badge]: https://img.shields.io/badge/docs-online-5023dd.svg
