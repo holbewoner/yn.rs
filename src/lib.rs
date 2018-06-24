@@ -92,11 +92,7 @@ const NO: [&str; 4] = ["n", "no", "false", "0"];
 pub fn yes(string: impl Display) -> bool {
     let string = convert_to_something_that_may_be_yes_or_no(string);
 
-    if definitely_yes(&string) {
-        return true;
-    }
-    
-    string.to_lowercase().split_whitespace().any(|w| w == YES[1] || w == YES[2] || w == YES[3])
+    definitely_yes(&string) || string.to_lowercase().split_whitespace().any(|w| YES[1..].contains(&w))
 }
 
 /// Determines if a value is somewhat yes.
@@ -125,12 +121,7 @@ pub fn yes(string: impl Display) -> bool {
 /// ```
 pub fn is_somewhat_yes(string: impl Display) -> bool {
     let string = convert_to_something_that_may_be_yes_or_no(string);
-    println!("{}", string);
-    if definitely_yes(&string) {
-        return true;        
-    }
-    
-    string.to_lowercase().split_whitespace().any(|w| w == YES[0] || w == YES[1] || w == YES[2] || w == YES[3])
+    definitely_yes(&string) || string.to_lowercase().split_whitespace().any(|w| YES.contains(&w))
 }
 
 /// Determines if a value is kinda yes.
@@ -183,11 +174,7 @@ pub fn is_kinda_yes(string: impl Display) -> bool {
 pub fn no(string: impl Display) -> bool {
     let string = convert_to_something_that_may_be_yes_or_no(string);
 
-    if definitely_no(&string) {
-        return true;
-    }
-    
-    string.to_lowercase().split_whitespace().any(|w| w == NO[1] || w == NO[2] || w == NO[3])
+    definitely_no(&string) || string.to_lowercase().split_whitespace().any(|w| NO[1..].contains(&w))
 }
 
 /// Determines if a value is somewhat no.
@@ -215,11 +202,7 @@ pub fn no(string: impl Display) -> bool {
 /// ```
 pub fn is_somewhat_no(string: impl Display) -> bool {
     let string = convert_to_something_that_may_be_yes_or_no(string);
-    if definitely_no(&string) {
-        return true;        
-    }
-    
-    string.to_lowercase().split_whitespace().any(|w| w == NO[0] || w == NO[1] || w == NO[2] || w == NO[3])
+    definitely_no(&string) || string.to_lowercase().split_whitespace().any(|w| NO.contains(&w))
 }
 
 
