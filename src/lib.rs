@@ -63,8 +63,8 @@
 
 use std::fmt::Display;
 
-const YES: [&str; 4] = ["y", "yes", "true", "1"];
-const NO: [&str; 4] = ["n", "no", "false", "0"];
+const YES: [&str; 12] = ["y", "yes", "true", "1", "yeah", "ya", "ye", "affirmative", "10-4", "aye", "yea", "yep"];
+const NO: [&str; 11] = ["n", "no", "false", "0", "nah", "nope", "nay", "nix", "not", "negative", "10-10"];
 
 /// Determines if a value is a form of yes.
 /// 
@@ -233,7 +233,7 @@ pub fn is_kinda_no(string: impl Display) -> bool {
 }
 
 fn convert_to_something_that_may_be_yes_or_no(string: impl Display) -> String {
-    string.to_string().chars().filter(|c| c.is_alphabetic() || ['0', '1', ' '].contains(c)).collect::<String>()
+    string.to_string().chars().filter(|c| c.is_alphabetic() || ['0', '1', ' ', '-', '4'].contains(c)).collect::<String>()
 }
 
 fn definitely_yes(string: &str) -> bool {
