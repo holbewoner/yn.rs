@@ -18,12 +18,12 @@ fn test_yes() {
   assert!(yn::yes("aye aye captain"));
   assert!(yn::yes("yea"));
   assert!(yn::yes("yep yep yep"));
-  assert!(yn::yes("I will never let you go, never let you down never gonna turn around and ye you");
-  assert!(yn::yes("Is this getting redicoulous? yes!");
-  assert!(yn::yes("Is TheUnitedStatesOfAmerica the greatest country known to mankind?, affirmative.");
-  assert!(yn::yes("roger roger beep boop 10-4 roger");
-  assert!(yn::yes("is this some good tests, 1 2 3, nah or maybe they are");
-  assert!(yn::yes("1, 2, 3 Poof... Ferris have evolved");
+  assert!(yn::yes("I will never let you go, never let you down never gonna turn around and ye you"));
+  assert!(yn::yes("Is this getting redicoulous? yes!"));
+  assert!(yn::yes("Is TheUnitedStatesOfAmerica the greatest country known to mankind?, affirmative."));
+  assert!(yn::yes("roger roger beep boop 10-4 roger"));
+  assert!(yn::yes("is this some good tests, 1 2 3, nah or maybe they are"));
+  assert!(yn::yes("1, 2, 3 Poof... Ferris have evolved"));
   assert!(!yn::yes("this contains a y"));
   assert!(!yn::yes("this contains a y here"));
   assert!(!yn::yes("this has many"));
@@ -39,7 +39,7 @@ fn test_yes() {
   assert!(!yn::yes("👀"));
   assert!(!yn::yes("aha"));
   assert!(!yn::yes("Will you marry me?"));
-  assert!(!yn::yes("Yippee ki-yay));
+  assert!(!yn::yes("Yippee ki-yay"));
 }
 
 #[test]
@@ -103,12 +103,12 @@ fn test_no() {
   assert!(!yn::no("Pennope"));
   assert!(!yn::no("unix"));
   assert!(!yn::no("yep yep yep"));
-  assert!(!yn::no("I will never let you go, never let you down never gonna turn around and ye you");
-  assert!(!yn::no("Is this getting redicoulous? yes!");
-  assert!(!yn::no("Is TheUnitedStatesOfAmerica the greatest country known to mankind?, affirmative.");
-  assert!(!yn::no("roger roger beep boop 10-4 roger");
-  assert!(!yn::no("is this some good tests, 1 2 3, nah or maybe they are");
-  assert!(!yn::no("1, 2, 3 Poof... Ferris have evolved");
+  assert!(!yn::no("I will never let you go, never let you down never gonna turn around and ye you"));
+  assert!(!yn::no("Is this getting redicoulous? yes!"));
+  assert!(!yn::no("Is TheUnitedStatesOfAmerica the greatest country known to mankind?, affirmative."));
+  assert!(!yn::no("roger roger beep boop 10-4 roger"));
+  assert!(yn::no("is this some good tests, 1 2 3, nah or maybe they are"));
+  assert!(!yn::no("1, 2, 3 Poof... Ferris have evolved"));
 
 }
 
@@ -131,7 +131,7 @@ fn test_is_somewhat_no() {
   assert!(yn::is_somewhat_no("not true"));
   assert!(yn::is_somewhat_no("negative smiley"));
   assert!(yn::is_somewhat_no("10-10"));
-  assert!(!yn::is_somewhat_no("0")); // As you know 10-10=0
+  assert!(yn::is_somewhat_no("0")); // As you know 10-10=0
   assert!(!yn::is_somewhat_no("is this yes?"));
   assert!(!yn::is_somewhat_no("this is down"));
   assert!(!yn::is_somewhat_no("yes"));
